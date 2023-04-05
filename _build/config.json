@@ -1,0 +1,23 @@
+{
+  "name": "PageShrink",
+  "lowCaseName": "pageshrink",
+  "description": "Automatically shrink the ouput on MODX Resources",
+  "author": "matdave",
+  "version": "0.0.1-pl",
+  "package": {
+    "elements": {
+      "plugins": [
+        {
+          "name": "PageShrink",
+          "file": "PageShrink.php",
+          "description": "Automatically shrink the ouput on MODX Resources",
+          "events": [
+              "OnWebPagePrerender",
+              "OnChunkSave",
+              "OnTemplateSave"
+          ]
+        }
+      ]
+    }
+  }
+}
