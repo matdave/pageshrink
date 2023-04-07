@@ -12,7 +12,7 @@
           "file": "PageShrink.php",
           "description": "Automatically shrink the ouput on MODX Resources",
           "events": [
-              "OnWebPagePrerender",
+              "OnWebPagePrerender"
           ]
         }
       ]
