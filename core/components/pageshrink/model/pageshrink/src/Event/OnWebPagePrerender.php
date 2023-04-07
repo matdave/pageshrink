@@ -103,6 +103,15 @@ class OnWebPagePrerender extends Event
         $html = new HtmlDomParser($dirty);
         $scripts = $html->find('script');
         foreach ($scripts as $script) {
+            if (empty($script->innertext) ||
+                $script->getAttribute('type') === 'text/template' ||
+                $script->getAttribute('type') === 'application/ld+json'
+            ) {
+                continue;
+            }
+            if ($script->getAttribute('src')) {
+                continue;
+            }
             try {
                 $script->innertext =  (new Minifier())::minify($script->innertext);
             } catch (\Exception $e) {
