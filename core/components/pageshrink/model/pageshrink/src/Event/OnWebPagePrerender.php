@@ -2,7 +2,7 @@
 namespace PageShrink\Event;
 
 use JShrink\Minifier;
-use PageShrink\Services\SringMinifier;
+use PageShrink\Services\StringMinifier;
 use voku\helper\HtmlMin;
 use voku\helper\HtmlDomParser;
 
@@ -117,7 +117,7 @@ class OnWebPagePrerender extends Event
         $html = new HtmlDomParser($dirty);
         $styles = $html->find('style');
         foreach ($styles as $style) {
-            $style->innertext =  new SringMinifier($style->innertext);
+            $style->innertext =  new StringMinifier($style->innertext);
         }
         return $html->save();
     }

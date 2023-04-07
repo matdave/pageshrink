@@ -2,7 +2,7 @@
 
 namespace PageShrink\Services;
 
-class SringMinifier
+class StringMinifier
 {
     protected string $string;
     public function __construct($string)
