@@ -117,7 +117,7 @@ class OnWebPagePrerender extends Event
         $html = new HtmlDomParser($dirty);
         $styles = $html->find('style');
         foreach ($styles as $style) {
-            $style->innertext =  new StringMinifier($style->innertext);
+            $style->innertext =  (new StringMinifier($style->innertext))->minify();
         }
         return $html->save();
     }

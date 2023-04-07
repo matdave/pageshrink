@@ -8,7 +8,6 @@ class StringMinifier
     public function __construct($string)
     {
         $this->string = $string;
-        return $this->minify();
     }
     public function minify(): string
     {
