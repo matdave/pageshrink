@@ -38,6 +38,10 @@ class StringMinifier
             '~([\r\n\t ])?([a-zA-Z0-9]+)="([a-zA-Z0-9_/\\-]+)"([\r\n\t ])?~s' => '$1$2=$3$4', //$1 and $4 insert first white-space character found before/after attribute
             //remove comment tags
             '/<!--(.*)-->/Uis'  => '',
+            //remove block comments, everything between /* and */
+            '/\/\*(?![\*\/])(?:(?!\*\/).)*\*\//s' => '',
+            // remove breaks in CSS styles
+            '/\s*[\r' . "\n" . '\t]\s*/' => ' ',
         );
         $this->string = preg_replace(array_keys($replace), array_values($replace), $this->string);
         return $this->string;
