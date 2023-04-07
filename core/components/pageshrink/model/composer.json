@@ -1,0 +1,26 @@
+{
+    "name": "matdave/pageshrink",
+    "description": "Automatically shrink the ouput on MODX Resources",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PageShrink\\": "pageshrink/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "matdave",
+            "email": "mat@matdave.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "voku/html-min": "^4.5",
+        "tedivm/jshrink": "^1.6",
+        "voku/simple_html_dom": "^4.8"
+    }
+}

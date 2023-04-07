@@ -3,7 +3,7 @@
   "lowCaseName": "pageshrink",
   "description": "Automatically shrink the ouput on MODX Resources",
   "author": "matdave",
-  "version": "0.0.1-pl",
+  "version": "0.1.0-pl",
   "package": {
     "elements": {
       "plugins": [
@@ -13,8 +13,6 @@
           "description": "Automatically shrink the ouput on MODX Resources",
           "events": [
               "OnWebPagePrerender",
-              "OnChunkSave",
-              "OnTemplateSave"
           ]
         }
       ]
