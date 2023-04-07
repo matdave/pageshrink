@@ -11,8 +11,14 @@ class OnWebPagePrerender extends Event
     protected array $cacheOptions = [
         \xPDO::OPT_CACHE_KEY => 'resource',
     ];
+
+    protected bool $cacheable = true;
     public function run()
     {
+        $this->cacheable = (
+            $this->modx->resource->get('cacheable') &&
+            $this->getOption('pageshrink.cache_resource_shrink', true)
+        );
         $cache = $this->getCache();
         if ($cache) {
             return;
@@ -41,7 +47,7 @@ class OnWebPagePrerender extends Event
 
     protected function getCache(): bool
     {
-        if ($this->modx->resource->get('cacheable')) {
+        if ($this->cacheable) {
             $cache = $this->modx->cacheManager->get($this->cacheKey(), $this->cacheOptions);
             if (!empty($cache)) {
                 $this->modx->resource->_output = $cache;
@@ -53,7 +59,7 @@ class OnWebPagePrerender extends Event
 
     protected function setCache(string $dirty)
     {
-        if ($this->modx->resource->get('cacheable')) {
+        if ($this->cacheable) {
             $this->modx->cacheManager->set($this->cacheKey(), $dirty, 0, $this->cacheOptions);
         }
         $this->modx->resource->_output = $dirty;

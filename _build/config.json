@@ -16,6 +16,13 @@
           ]
         }
       ]
-    }
+    },
+    "systemSettings": [
+      {
+        "key": "cache_resource_shrink",
+        "type": "combo-boolean",
+        "value": "1"
+      }
+    ]
   }
 }
