@@ -3,7 +3,7 @@
   "lowCaseName": "pageshrink",
   "description": "Automatically shrink the ouput on MODX Resources",
   "author": "matdave",
-  "version": "0.1.3-pl",
+  "version": "1.0.0-pl",
   "package": {
     "elements": {
       "plugins": [
