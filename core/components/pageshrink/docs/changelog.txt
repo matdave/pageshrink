@@ -1,3 +1,7 @@
+1.0.1-pl
+=========
+- Adjust the cache key to better determine if the content has changed
+
 1.0.0-pl
 =========
 - Initial release

@@ -15,14 +15,6 @@ class OnWebPagePrerender extends Event
     protected bool $cacheable = true;
     public function run()
     {
-        $this->cacheable = (
-            $this->modx->resource->get('cacheable') &&
-            $this->getOption('pageshrink.cache_resource_shrink', true)
-        );
-        $cache = $this->getCache();
-        if ($cache) {
-            return;
-        }
         $modContentType = 'modContentType';
         if ($this->getVersion() > 2) {
             $modContentType = '\\MODX\\Revolution\\modContentType';
@@ -31,6 +23,14 @@ class OnWebPagePrerender extends Event
         if (empty($contentType) ||
             $contentType->get('mime_type') !== 'text/html'
         ) {
+            return;
+        }
+        $this->cacheable = (
+            $this->modx->resource->get('cacheable') &&
+            $this->getOption('pageshrink.cache_resource_shrink', true)
+        );
+        $cache = $this->getCache();
+        if ($cache) {
             return;
         }
         $dirty = $this->modx->resource->_output;
@@ -42,7 +42,8 @@ class OnWebPagePrerender extends Event
 
     protected function cacheKey(): string
     {
-        return "{$this->modx->context->key}/resources/{$this->modx->resource->id}.pageshrink";
+        $md5 = md5($this->modx->resource->_output);
+        return "{$this->modx->context->key}/resources/{$this->modx->resource->id}.pageshrink.$md5";
     }
 
     protected function getCache(): bool

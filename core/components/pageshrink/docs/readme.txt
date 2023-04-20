@@ -23,4 +23,5 @@ cache globally by setting the `pageshrink.cache_resource_shrink` system setting 
 It is recommended to keep the page cache enabled. If you have specific resources that you do not want to cache, you can
 disable the cache for those resources by setting the `cacheable` property to `0` in the resource's settings. This would
 apply to things like forms, pages with pagination, etc., where the painted content of the page will change based on a
-user interaction or request variable.
+user interaction or request variable. PageShrink will attempt to detect these types of pages and create a new cache, but
+there may be some edge cases where it does not work as expected.
