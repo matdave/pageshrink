@@ -15,6 +15,9 @@ class OnWebPagePrerender extends Event
     protected bool $cacheable = true;
     public function run()
     {
+        if (!$this->getOption('pageshrink.resource_shrink', true)) {
+            return;
+        }
         $modContentType = 'modContentType';
         if ($this->getVersion() > 2) {
             $modContentType = '\\MODX\\Revolution\\modContentType';

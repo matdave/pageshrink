@@ -1,3 +1,7 @@
+1.0.2-pl
+=========
+- Add setting to allow to disable minification (useful for user group or context)
+
 1.0.1-pl
 =========
 - Adjust the cache key to better determine if the content has changed
