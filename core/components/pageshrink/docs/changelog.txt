@@ -1,3 +1,8 @@
+1.0.3-pl
+=========
+- Add settings to enable/disable certain minification options
+- Add ability to minify CSS and JS type resources
+
 1.0.2-pl
 =========
 - Add setting to allow to disable minification (useful for user group or context)

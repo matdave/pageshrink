@@ -11,9 +11,10 @@ MODX Package Browser.
 
 ## System Settings
 
-| Key                              | Default | Description                               |
-|----------------------------------|---------|-------------------------------------------|
-| pageshrink.cache_resource_shrink | 1       | Cache the shrunk version of the resource. |
+| Key                              | Default | Description                                                                      |
+|----------------------------------|---------|----------------------------------------------------------------------------------|
+| pageshrink.cache_resource_shrink | 1       | Cache the shrunk version of the resource.                                        |
+| pageshrink.resource_shrink       | 1       | Shrink the output of a resource (useful for disabling per context or user group) |
 
 ## Usage
 

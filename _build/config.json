@@ -3,7 +3,7 @@
   "lowCaseName": "pageshrink",
   "description": "Automatically shrink the ouput on MODX Resources",
   "author": "matdave",
-  "version": "1.0.2-pl",
+  "version": "1.0.3-pl",
   "package": {
     "elements": {
       "plugins": [
@@ -21,12 +21,146 @@
       {
         "key": "resource_shrink",
         "type": "combo-boolean",
-        "value": "1"
+        "value": "1",
+        "area": "system"
       },
       {
         "key": "cache_resource_shrink",
         "type": "combo-boolean",
-        "value": "1"
+        "value": "1",
+        "area": "system"
+      },
+      {
+        "key": "optimize_via_html_dom_parser",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_comments",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "sum_up_whitespace",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_whitespace_around_tags",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "optimize_attributes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_http_prefix_from_attributes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "keep_http_prefix_on_external_attributes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_default_attributes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_anchor_name",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_script_charset_attribute",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_type_from_script_tag",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_type_from_stylesheet_link",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_type_from_style_link_tag",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_default_media_typed_link_tag",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_default_type_from_button",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_empty_attributes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_value_from_empty_input",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "sort_css_class_names",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "sort_html_attributes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_spaces_between_tags",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_omitted_quotes",
+        "type": "combo-boolean",
+        "value": "1",
+        "area": "pageshrink.minify_options"
+      },
+      {
+        "key": "remove_omitted_html_tags",
+        "type": "combo-boolean",
+        "value": "0",
+        "area": "pageshrink.minify_options"
       }
     ]
   }

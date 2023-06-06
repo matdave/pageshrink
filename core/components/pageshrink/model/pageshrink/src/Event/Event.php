@@ -21,9 +21,9 @@ abstract class Event
 
     abstract public function run();
 
-    protected function getOption($key, $default = null, $skipEmpty = true)
+    protected function getOption($key, $default = null)
     {
-        return $this->modx->getOption($key, $this->properties, $default, $skipEmpty);
+        return $this->pageshrink->getOption($key, $this->properties, $default);
     }
 
     protected function getVersion(): int
