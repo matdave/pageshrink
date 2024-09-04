@@ -1,3 +1,7 @@
+1.0.4-pl
+=========
+- Upgrade package dependencies
+
 1.0.3-pl
 =========
 - Add settings to enable/disable certain minification options
